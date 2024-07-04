@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    font-family: Arial;
+    
+}
+
+.navbar{
+    height: 55px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo{
+    background-image: url("amazon_logo.png");
+    background-size: cover;
+    width: 100%;
+    height: 50px;
+}
+
+.nav-logo{
+    height: 50px;
+    margin-right: 10px;
+    width: 130px;
+    
+}
+.border{
+    border:2px solid transparent;
+    transition: all 0.3s ease;
+}
+.border:hover{
+    transform: scale(1.1);
+    
+}
+
+.add-first{
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin-left: 13px;
+
+}
+.add-second{
+    font-size: 1rem;
+}
+
+.add-icon{
+    display: flex;
+    align-items: center;
+}
+
+.nav-search{
+    margin-left: 7px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 620px;
+    height: 40px;
+    background-color: pink;
+    border-radius: 4px;
+
+}
+
+.nav-search:hover{
+    border: 2px solid orange;
+}
+/* .search-select{
+    
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border: none;
+}
+.search-input{
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+
+    
+}
+.search-icon{
+    width: 45px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: rgba(255,174,0,0.6);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #0f1111;
+} */
+
+.account{
+    font-size: 0.7rem;
+}
+
+.orders{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+.nav-cart{
+    display: flex;
+    align-items: center;
+}
+.cart-icon{
+
+    margin-right: 0.4rem;
+    font-size: 25px;
+}
+.cart-size{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+.panel{
+    display: flex;
+    height: 35px;
+    background-color: #222f3d;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.panel-ops p{
+    display: inline;
+    margin-left: 15px;
+
+}
+.panel-ops{
+    width: 70%;
+    font-size: 0.85rem;
+
+}
+
+.panel-deals{
+    font-size:0.9rem;
+    font-weight: 700;
+}
+
+.hero-section{
+    
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.hero-mssg{
+    background-color: white;
+    color:black;
+    height: 40px;
+    display: flex;
+    align-items: center;  /*vertically center me lane ke liye*/
+    justify-content: center; /*horizontally center me lane ke liye*/
+    font-size: 0.85rem;
+    width: 80%;
+    margin-bottom: 25px;
+
+    
+}
+
+
+
+.hero-mssg a{
+    color: #007185;
+
+}
+.box{
+    height: 400px;   
+    width: 31%;
+    background-color: white;
+    padding: 30px 0px px;
+    margin-top: 15px;
+}
+
+.shop-section{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(228, 228, 228, 0.6)
+
+
+}
+.box-image {
+    height: 300px;
+    background-size: contain; /* Adjust background size */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating of the image */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.box-content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.foot-panel1{
+    margin-top: 15px;
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.foot-panel2{
+    background-color: #222f3d;
+    color: white;
+    display: flex;
+    height: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ul a{
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #DDDDDD;
+}
+
+ul{
+    margin-top: 10px;
+}
+
+
+#scroll-text {
+    /* animation properties */
+    color: #D3D3D3;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+  }
+  
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  }
+  
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+}
+  

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Connect</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{% static 'account_css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'account_css/css/style.css'%}">
+</head>
+<body id="body_base">
+    <header>
+
+        {% if user.is_authenticated %}
+        <div class="container">
+            <h1>Impact Connect</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'posts:create' %}">Post</a></li>
+                    <li><a href="{% url 'groups:all' %}">Groups</a></li>
+                    <li><a href="{% url 'groups:create' %}">Create Groups</a></li>
+                    <li><a href="{% url 'accounts:logout' %}">Log out</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        {% else %}
+        <div class="container">
+            <h1>Impact Connect</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'groups:all' %}">Groups</a></li>
+                    <li><a href="{% url 'aboutUs' %}">About Us</a></li>
+                    <li><a href="{% url 'accounts:login' %}">Login</a></li>
+                    <li><a href="{% url 'accounts:signup' %}">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        {% endif %}
+
+
+    </header>
+
+
+
+
+
+   
+
+    <div class="container mycontent">
+        {% block content %}
+  
+        {% endblock %}
+      </div>
+  
+      <canvas id="canvas"></canvas>
+
+
+
+
+
+    {% if not user.is_authenticated %}
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Impact Connect</h2>
+            <p>Impact Connect is a multi-user platform designed to facilitate collaboration among individuals and organizations dedicated to social welfare initiatives.</p>
+        </div>
+    </section>
+    
+    <section id="features" class="section">
+        <div class="container">
+            <h2>Features</h2>
+            <ul>
+                <li>Resource Sharing</li>
+                <li>Project Collaboration</li>
+                <li>Community Building</li>
+                <li>Impact Tracking</li>
+            </ul>
+        </div>
+    </section>
+
+    {% endif %}
+
+
+
+    
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    
+
+</body>
+</html>
